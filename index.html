@@ -18,7 +18,7 @@
     />
     <link rel="stylesheet" href="./scc/styles.css" />
   </head>
-  <body>
+  <body data-page>
     <!--Header section-->
     <header class="header">
       <div class="container hdr-container">
@@ -26,13 +26,13 @@
        <nav class="header-nav">
         <ul class="header-list link list hdr-main-lnk">
           <li class="header-item">
-            <a class="header-link hdr-lnk header-link-current link" href="./index.html">Студия</a>
+            <a class="header-link header-link-current link" href="./index.html">Студия</a>
           </li>
           <li class="header-item">
-            <a class="header-link hdr-lnk link" href="portfolio.html">Портфолио</a>
+            <a class="header-link link" href="portfolio.html">Портфолио</a>
           </li>
           <li class="header-item">
-            <a class="header-link hdr-lnk link" href="#">Контакты</a>
+            <a class="header-link link" href="#">Контакты</a>
           </li>
         </ul>
         </nav>
@@ -57,7 +57,7 @@
       <section class="hero">
         <div class="container cntnr-hero">
           <h1>Эффективные решения для вашего бизнеса</h1>
-          <button class="main-btn" type="button">Заказать услугу</button>
+          <button class="main-btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!--Section about us info-->
@@ -125,18 +125,27 @@
         <div class="container cntnr-work-pic">
           <h2 class="work-pic">Чем мы занимаемся</h2>
           <ul class="list about-pic">
-            <li>
+            <li class="about-work-li">
               <img src="./images/img1.jpg" alt="Крупного плана изображение программиста работающего за
-              его рабочим столом" width="370" height="294"
+              его рабочим столом" width="370" height="294"/>
+              <div class="overlay-work">
+                <p class="overlay-work-txt">Десктопные приложения</p>
+              </div>
             </li>
-            <li>
+            <li class="about-work-li">
               <img src="./images/img2.jpg" alt="Веб-дизайнер разрабатывающий пользовательские
               интерфейсы приложений для смартфонов работает над созданием интерфейса приложения для
-              телефонов" width="370" height="294"
+              телефонов" width="370" height="294"/>
+              <div class="overlay-work">
+                <p class="overlay-work-txt">Мобильные приложения</p>
+              </div>
             </li>
-            <li>
+            <li class="about-work-li">
               <img src="./images/img3.jpg" alt="Креативный художник веб-дизайнер работающий над
-              выбором-цвета с графическим планшетом" width="370" height="294"
+              выбором-цвета с графическим планшетом" width="370" height="294"/>
+              <div class="overlay-work">
+                <p class="overlay-work-txt">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -576,5 +585,17 @@
         </div>
       </div>
     </footer>
+    <!--Modal Window-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-btn-svg" width="11" height="11">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
